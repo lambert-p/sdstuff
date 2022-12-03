@@ -17,7 +17,7 @@ Quick aside: If you care about achievements in old games, sign up for an account
 
 ## Install Emulators
 
-There's a ton of different ways to get emulators on your Steam Deck. Some you can install as Flatpaks, or directly from Valve, or manually compiling from source, etc.... but I've found Emu Deck to be the easiest. It is an install script that manages several different emulators for you with sensible defaults. 
+There's a ton of different ways to get emulators on your Steam Deck. Some you can install as Flatpaks, or directly from Valve, or manually compiling from source, etc.... but I've found EmuDeck to be the easiest. It is an install script that manages several different emulators for you with sensible defaults. 
 
 https://www.emudeck.com/
 
@@ -40,7 +40,7 @@ At this point you can simply add synced folders and they will appear on the othe
 
 At this point I'd recommend connecting a keyboard to your Steam Deck and follow the [instructions written on this Reddit post](https://www.reddit.com/r/SteamDeck/comments/vocyi5/start_syncthing_automatically_on_steamdeck_even/). 
 
-Emu Deck is configured to look for ROMs in `/run/media/mmcblk0p1/Emulation/` -- this folder I have synced across devices, so as I rip games on my Desktop, I can just drag them into `.../Emulation/roms/3ds/` and they will instanteously sync over to my Deck.
+EmuDeck is configured to look for ROMs in `/run/media/mmcblk0p1/Emulation/` -- this folder I have synced across devices, so as I rip games on my Desktop, I can just drag them into `.../Emulation/roms/3ds/` and they will instanteously sync over to my Deck.
 
 ## Proof of Concept
 
@@ -52,15 +52,15 @@ For the remainder of this test I will be using Super Metroid for the SNES as an 
 
 Launch your SNES emulator, **RetroArch**, by going to Start > Games > RetroArch. Load the game in to RetroArch by going to `Main Menu > Load Content > Playlists > Import Content > Scan Directory > <Scan this Directory>` (it should already be pointed at the right place, namely, `/run/media/mmcblk0p1/Emulation/roms`.
 
-From the main RetroArch screen, scroll down to the bottom of the left menu to the Super Nintendo Entertainment System, select Super Metroid, pick an appropriate core, and hit Run. The game should load and also give you notifications about your achievement progress if you entered your RetroAchievements credentials during the Emu Deck install. Nice!!! Ok, hold `Start + Select` simultaneously to close out of the game.
+From the main RetroArch screen, scroll down to the bottom of the left menu to the Super Nintendo Entertainment System, select Super Metroid, pick an appropriate core, and hit Run. The game should load and also give you notifications about your achievement progress if you entered your RetroAchievements credentials during the EmuDeck install. Nice!!! Ok, hold `Start + Select` simultaneously to close out of the game.
 
 ## Further Setup
 
 Ok we have our emulators installed, we have Syncthing set up to easily manage ROMs (etc), and we got our first ROM to load. Awesome progress. 
 
-Emu Deck comes with a program that will detect your ROMs and add them as "non-Steam games" to Steam for you. **I HIGHLY HIGHLY HIGHLY HIGLY RECOMMEND DOING THIS. ** Launching your emulated games within Steam is not only a lot easier than going to Desktop mode, but also allows you to manage custom keybindings a lot easier. 
+EmuDeck comes with a program that will detect your ROMs and add them as "non-Steam games" to Steam for you. **I HIGHLY HIGHLY HIGHLY HIGLY RECOMMEND DOING THIS.** Launching your emulated games within Steam is not only a lot easier than going to Desktop mode, but also allows you to manage custom keybindings a lot easier. 
 
-In order to do this, first things first:
+In order to do this:
 - Be in Desktop Mode
 - Close out of Steam (on the task bar, right click > Exit Steam)
 - Launch the EmuDeck program from your Desktop
@@ -119,10 +119,10 @@ This is the only tricky part of the whole thing.
 
 - DISABLE VSYNC
 - DISABLE HARDWARE SHADERS
-- TODO write explanation
 
 - Or not, this guy already did the same thing:
 https://overkill.wtf/how-to-play-nintendo-zelda-ocarina-of-time-and-majoras-mask-in-4k-on-steam-deck/
+- I was gonna write this but somebody else did already https://www.sportskeeda.com/gaming-tech/how-play-3ds-games-dual-screen-format-steam-deck-using-citra-emulator
 
 ```
 cd ~/.var/app/org.citra_emu.citra/config/citra-emu
@@ -149,29 +149,6 @@ Here are some suggestions:
 * [Project Restoration](https://github.com/leoetlino/project-restoration)
 * [HD textures](https://github.com/DeathWrench/MM3DHD)
 * [MM3D Remastered Soundtrack](https://github.com/sygemdev/Majora-s-Mask-3D-Remastered-OST)
-
-### Running Citra on the Deck while docked to a monitor for primary output
-
-plug in hdmi to the usb-c hub
-extend to the right?
-set monitor as primary screen
-
-i was gonna write this but somebody else did already https://www.sportskeeda.com/gaming-tech/how-play-3ds-games-dual-screen-format-steam-deck-using-citra-emulator
-
-```
-cd ~/.var/app/org.citra_emu.citra/config/citra-emu
-cp qt-config.ini qt-config.old
-vim qt-config.ini
-Go to [Layout] section: <Esc> :257
-```
-
-citra: view -> uncheck single window mode
-
-hide task bar
-hide top bar
-
-https://www.sportskeeda.com/gaming-tech/how-play-3ds-games-dual-screen-format-steam-deck-using-citra-emulator
-https://www.youtube.com/watch?v=AgNvCFbeGpc
 
 
 ## xbox cloud gaming

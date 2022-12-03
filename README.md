@@ -80,11 +80,9 @@ Go to your Library. Scroll to the right with R1 until you're at Collections or N
 
 ## Miscellaneous important setup stuff
 
-set sudo with `passwd`
-increase swap + TRIM + vram: https://www.youtube.com/watch?v=od9_a1QQQns
-
-
-OR DON'T DO THIS MANUALLY AND USE CYRO TOOLS. MUCH EASIER! https://github.com/CryoByte33/steam-deck-utilities
+- set sudo with `passwd`
+- increase swap + TRIM + vram: https://www.youtube.com/watch?v=od9_a1QQQns
+- OR DON'T DO THIS MANUALLY AND USE [CYRO TOOLS. MUCH EASIER!](https://github.com/CryoByte33/steam-deck-utilities)
 
 
 ## Other important Steam Deck performance stuff

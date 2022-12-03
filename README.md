@@ -31,7 +31,10 @@ Now you've got emulators installed, but you need roms to make them worthwhile! Y
 - On Windows: https://syncthing.net/downloads/
 - On Steam Deck: From the Discover software center, install Syncthing GTK (or `flatpak install flathub me.kozec.syncthingtk` )
 
-On your Steam Deck, launch Syncthing GTK and in the upper right corner click on the Cog > Show ID. On Windows, Cog > Add Device > paste the ID in. Save. On your Deck you will get a notification about your PC being added; click Add. 
+- On your Steam Deck, launch Syncthing GTK and in the upper right corner click on the Cog > Show ID. 
+
+- On Windows, Cog > Add Device > paste the ID in. Save.
+- On your Deck you will get a notification about your PC being added; click Add. 
 
 At this point you can simply add synced folders and they will appear on the other device. But we've got some hacking to do to make this a bit better. 
 

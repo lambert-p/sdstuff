@@ -23,7 +23,8 @@ https://www.emudeck.com/
 
 Choose custom installation so you can set up options to your liking. I recommend installing to your SD card, and you can also select options such as bezels in very old 4:3 games and linking your RetroAchievements account.
 
-## Install Syncthing (optional but recommended) 
+## Install 
+(optional but recommended) 
 
 Now you've got emulators installed, but you need roms to make them worthwhile! You can get ROMs on to your Steam Deck any way you like, but I've found Syncthing to be incredibly helpful for seamlessly managing ROMs, HD packs, saves, etc. (Also I use Syncthing for Steam games that don't have Cloud Save enabled, like Dark Souls 2). 
 
@@ -71,7 +72,6 @@ At this point, all ROMs you have located in the correct directory will now have 
 
 Go to your Library. Scroll to the right with R1 until you're at Collections or Non-Steam games. Here you'll find all of your emulators and also all of your ROMs, each with custom art. Launch Super Metroid to make sure it works. Achievements should be working too. Hell yeah! 
 
-# DOWN HERE IS ALL WORK IN PROGRESS STUFF / PERSONAL NOTES / ETC 
 
 # General Steam Deck setup stuff
 
@@ -79,7 +79,14 @@ Go to your Library. Scroll to the right with R1 until you're at Collections or N
 
 set sudo with ```passwd```
 
-Increase swap on the Steam Deck
+OR DON'T DO THIS MANUALLY AND USE CYRO TOOLS. MUCH EASIER! https://github.com/CryoByte33/steam-deck-utilities
+
+
+swap + TRIM + vram
+https://www.youtube.com/watch?v=od9_a1QQQns
+
+
+~~~Increase swap on the Steam Deck~~~
 
 ```
 passwd # Create a root password for example "deck"
@@ -92,19 +99,26 @@ sudo swapon swapfile # Activate swap
 ```
 
 
+## Other important Steam Deck performance stuff
 
+- install ProtonUp-Qt from Discover
+- use ProtonUp to install ProtonGE
+- install ProtonTricks from Discover
+- install PowerTools + Decky
+
+## Install 1Pass
 ```
 sudo pacman-key —init
 sudo pacman-key --refresh-keys
 ```
 
-This applies to Desktop Mode.
-If you have not already, use passwd to create a password for the deck user.
-Disable read-only mode: sudo btrfs property set -ts / ro false
-Initialize the pacman keyring: sudo pacman-key --init
-Populate the pacman keyring with the default Arch Linux keys: sudo pacman-key --populate archlinux
-Try installing a package: sudo pacman -S vi
-https://www.reddit.com/r/SteamDeck/comments/t8al0i/install_arch_packages_on_your_steam_deck/
+If you have not already, use `passwd` to create a password for the deck user.
+
+Disable read-only mode: `sudo btrfs property set -ts / ro false`
+
+Initialize the pacman keyring: `sudo pacman-key --init`
+Populate the pacman keyring with the default Arch Linux keys: `sudo pacman-key --populate archlinux`
+Try installing a package: `sudo pacman -S vi`
 
 ```
 sudo pacman -S base-devel
@@ -114,13 +128,8 @@ install 1password
 https://support.1password.com/install-linux/#arch-linux
 
 
-```
-sudo pacman -S unzip
-```
-install ProtonUp-Qt from Discover
-use ProtonUp to install ProtonGE
 
-install ProtonTricks from Discover
+# DOWN HERE IS ALL WORK IN PROGRESS STUFF / PERSONAL NOTES / ETC 
 
 # Specific emulator setup
 
@@ -134,13 +143,7 @@ Plug in your desired screen. Extend it to the right.
 
 Set monitor as primary screen.
 
-### Copy your stuff over
-
-ROMs go in `/run/media/<sd card name>/Emulation/roms/` 
-
-Mod information will come below. 
-
-## Configure citra
+### Configure citra
 
 This is the only tricky part of the whole thing. 
 
@@ -164,19 +167,33 @@ citra: view -> uncheck single window mode
 
 ## Game mods working on citra
 
+
 ```
 /home/deck/.var/app/org.citra_emu.citra/data/citra-emu/load/textures/
 ```
 
+### Majora's Mask enhancement packs
+
+Here are some suggestions:
+
+* [Project Restoration](https://github.com/leoetlino/project-restoration)
+* [HD textures](https://github.com/DeathWrench/MM3DHD)
+* [MM3D Remastered Soundtrack](https://github.com/sygemdev/Majora-s-Mask-3D-Remastered-OST)
+
+### Running Citra on the Deck while docked to a monitor for primary output
 
 plug in hdmi to the usb-c hub
 extend to the right?
 set monitor as primary screen
 
+i was gonna write this but somebody else did already https://www.sportskeeda.com/gaming-tech/how-play-3ds-games-dual-screen-format-steam-deck-using-citra-emulator
+
+```
 cd ~/.var/app/org.citra_emu.citra/config/citra-emu
 cp qt-config.ini qt-config.old
 vim qt-config.ini
 Go to [Layout] section: <Esc> :257
+```
 
 citra: view -> uncheck single window mode
 
@@ -186,37 +203,7 @@ hide top bar
 https://www.sportskeeda.com/gaming-tech/how-play-3ds-games-dual-screen-format-steam-deck-using-citra-emulator
 https://www.youtube.com/watch?v=AgNvCFbeGpc
 
-TODO figure out how to resize without a mouse
-TODO mods?
 
-
-
-
-xbox cloud gaming
+## xbox cloud gaming
 https://support.microsoft.com/en-us/topic/xbox-cloud-gaming-in-microsoft-edge-with-steam-deck-43dd011b-0ce8-4810-8302-965be6d53296
 
-——
-install emudeck
-
-other games working on emudeck in steamos interface 
-https://www.youtube.com/watch?v=ylErPAL2cj0
-
-general tips and tricks
-https://www.youtube.com/watch?v=5uQcEyPzia4
-
-https://www.sportskeeda.com/gaming-tech/how-play-3ds-games-dual-screen-format-steam-deck-using-citra-emulator
-
----
-swap + TRIM + vram
-https://www.youtube.com/watch?v=od9_a1QQQns
-
-syncthing
-https://www.reddit.com/r/SteamDeck/comments/vocyi5/start_syncthing_automatically_on_steamdeck_even/
-  
-## Majora's Mask enhancement packs
-
-Here are some suggestions:
-
-* [Project Restoration](https://github.com/leoetlino/project-restoration)
-* [HD textures](https://github.com/DeathWrench/MM3DHD)
-* [MM3D Remastered Soundtrack](https://github.com/sygemdev/Majora-s-Mask-3D-Remastered-OST)

@@ -80,16 +80,14 @@ Go to your Library. Scroll to the right with R1 until you're at Collections or N
 
 ## Miscellaneous important setup stuff
 
-set sudo with ```passwd```
+set sudo with `passwd`
 
 OR DON'T DO THIS MANUALLY AND USE CYRO TOOLS. MUCH EASIER! https://github.com/CryoByte33/steam-deck-utilities
 
-
-swap + TRIM + vram
-https://www.youtube.com/watch?v=od9_a1QQQns
+swap + TRIM + vram: https://www.youtube.com/watch?v=od9_a1QQQns
 
 
-~~~Increase swap on the Steam Deck~~~
+Increase swap on the Steam Deck
 
 ```
 passwd # Create a root password for example "deck"
@@ -135,6 +133,8 @@ https://support.1password.com/install-linux/#arch-linux
 # DOWN HERE IS ALL WORK IN PROGRESS STUFF / PERSONAL NOTES / ETC 
 
 # Specific emulator setup
+
+Remember to set your Steam controller options to use an EmuDeck preset in order to get the most out of the [EmuDeck hotkeys](https://github.com/dragoonDorise/EmuDeck/wiki/Hotkeys) !!
 
 ## Citra
 

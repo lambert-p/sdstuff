@@ -28,8 +28,8 @@ Choose custom installation so you can set up options to your liking. I recommend
 
 Now you've got emulators installed, but you need roms to make them worthwhile! You can get ROMs on to your Steam Deck any way you like, but I've found Syncthing to be incredibly helpful for seamlessly managing ROMs, HD packs, saves, etc. (Also I use Syncthing for Steam games that don't have Cloud Save enabled, like Dark Souls 2). 
 
-On Windows: https://syncthing.net/downloads/
-On Steam Deck: From the Discover software center, install Syncthing GTK (or `flatpak install flathub me.kozec.syncthingtk` )
+- On Windows: https://syncthing.net/downloads/
+- On Steam Deck: From the Discover software center, install Syncthing GTK (or `flatpak install flathub me.kozec.syncthingtk` )
 
 On your Steam Deck, launch Syncthing GTK and in the upper right corner click on the Cog > Show ID. On Windows, Cog > Add Device > paste the ID in. Save. On your Deck you will get a notification about your PC being added; click Add. 
 

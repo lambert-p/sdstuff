@@ -81,23 +81,10 @@ Go to your Library. Scroll to the right with R1 until you're at Collections or N
 ## Miscellaneous important setup stuff
 
 set sudo with `passwd`
+increase swap + TRIM + vram: https://www.youtube.com/watch?v=od9_a1QQQns
+
 
 OR DON'T DO THIS MANUALLY AND USE CYRO TOOLS. MUCH EASIER! https://github.com/CryoByte33/steam-deck-utilities
-
-swap + TRIM + vram: https://www.youtube.com/watch?v=od9_a1QQQns
-
-
-Increase swap on the Steam Deck
-
-```
-passwd # Create a root password for example "deck"
-sudo steamos-readonly disable # Disable the read only FS
-cd /home # There is a "swapfile" located here we'll reuse it
-sudo swapoff -a # Stop swap process
-sudo dd if=/dev/zero of=swapfile bs=1G count=8 # Increase swap to 8gb
-sudo mkswap swapfile # swap ready file again
-sudo swapon swapfile # Activate swap
-```
 
 
 ## Other important Steam Deck performance stuff
@@ -108,26 +95,8 @@ sudo swapon swapfile # Activate swap
 - install PowerTools + Decky
 
 ## Install 1Pass
-```
-sudo pacman-key —init
-sudo pacman-key --refresh-keys
-```
 
-If you have not already, use `passwd` to create a password for the deck user.
-
-Disable read-only mode: `sudo btrfs property set -ts / ro false`
-
-Initialize the pacman keyring: `sudo pacman-key --init`
-Populate the pacman keyring with the default Arch Linux keys: `sudo pacman-key --populate archlinux`
-Try installing a package: `sudo pacman -S vi`
-
-```
-sudo pacman -S base-devel
-install 1password 
-```
-
-https://support.1password.com/install-linux/#arch-linux
-
+[JUST INSTALL THE FLATPAK](https://support.1password.com/install-linux/#flatpak)
 
 
 # DOWN HERE IS ALL WORK IN PROGRESS STUFF / PERSONAL NOTES / ETC 

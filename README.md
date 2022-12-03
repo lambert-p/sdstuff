@@ -23,7 +23,7 @@ https://www.emudeck.com/
 
 Choose custom installation so you can set up options to your liking. I recommend installing to your SD card, and you can also select options such as bezels in very old 4:3 games and linking your RetroAchievements account.
 
-## Install 
+## Install Syncthing
 (optional but recommended) 
 
 Now you've got emulators installed, but you need roms to make them worthwhile! You can get ROMs on to your Steam Deck any way you like, but I've found Syncthing to be incredibly helpful for seamlessly managing ROMs, HD packs, saves, etc. (Also I use Syncthing for Steam games that don't have Cloud Save enabled, like Dark Souls 2). 
